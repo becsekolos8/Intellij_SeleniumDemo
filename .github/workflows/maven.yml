@@ -31,11 +31,8 @@ jobs:
 
     - name: Build with Maven
       env:
-        DB_URL: ${{ github.workspace }}
-      run:
-        echo ${{ github.workspace }}
-        echo $GITHUB_WORKSPACE
-        mvn clean test
+        DB_URL: ${{ github.workspace }}/Repo
+      run: mvn clean test
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
  
